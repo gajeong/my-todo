@@ -17,9 +17,13 @@ export interface video {
   }
 }
 
-export interface playlist {
+export interface VideoList {
   status: number
   data: {
     items: video[]
   }
 }
+
+export type SearchData = (
+  keyword: string
+) => Promise<VideoList>

@@ -1,21 +1,34 @@
 import { fetchPlayList } from '../../api/playlist'
 import { QueryObserverResult, useQuery } from 'react-query'
-import { playlist, video } from '../../types/video'
+import {
+  VideoList,
+  SearchData,
+  video,
+} from '../../types/video'
 import PlayItem from './playItem'
 import MultiCarousel from '../common/MultiCarousel'
 
-export default function PlayList() {
+export default function PlayList({
+  keyword,
+  fetch,
+}: {
+  keyword: string
+  fetch: (keyword: string) => Promise<VideoList>
+}) {
   const {
     isLoading,
     isError,
     data: playlist,
     error,
-  }: QueryObserverResult<playlist> = useQuery(
+  }: QueryObserverResult<VideoList> = useQuery(
     'playlist',
-    fetchPlayList
+    async () => await fetch(keyword)
   )
   return (
-    <section className='w-3/5 h-80'>
+    <section className='w-3/5 h-80 px-8 '>
+      <p className='w-fit bg-gray-100 p-1 text-sm rounded-md italic'>
+        #{keyword}
+      </p>
       {playlist?.data.items.length && (
         <MultiCarousel>
           {playlist?.data.items.map((item) => (

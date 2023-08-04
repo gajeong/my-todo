@@ -13,13 +13,13 @@ export default function Header() {
       <Button>
         <div className={styles.item}>
           <TiThMenuOutline />
-          <p>Menu</p>
+          <p className='px-2'>Menu</p>
         </div>
       </Button>
       <Button>
         <div className={styles.item}>
           <TbCalendarHeart />
-          <p>Projects</p>
+          <p className='px-2'>Projects</p>
         </div>
       </Button>
     </header>

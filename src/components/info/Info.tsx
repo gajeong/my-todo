@@ -3,7 +3,7 @@ import styles from './Info.module.css'
 export default function Info() {
   return (
     <section
-      className={`${styles.font} p-8 w-2/5 border-solid border-r-1`}
+      className={`${styles.font} p-8 w-2/5 border-r-2 h-full`}
     >
       <h1 className='text-4xl'>Kim Ga Jung</h1>
       <span className='text-lg text-gray-500 underline underline-offset-4'>

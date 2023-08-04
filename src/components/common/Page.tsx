@@ -3,9 +3,11 @@ import styles from './Page.module.css'
 import { children } from '../../types/common'
 export default function Page({ children }: children) {
   return (
-    <div className={`${styles.container} shadow-lg`}>
+    <main className={`${styles.container} h-full`}>
       <Header />
-      {children}
-    </div>
+      <div className={`shadow-lg ${styles.scroll}`}>
+        {children}
+      </div>
+    </main>
   )
 }
