@@ -1,10 +1,20 @@
 @import url('./color.css');
+@import 'react-multi-carousel/lib/styles.css';
+
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   box-sizing: border-box;
 }
 .App {
   text-align: center;
+  font-family: 'SUIT-Regular';
   padding: 1rem;
 }
 
@@ -31,6 +41,9 @@
 
 .App-link {
   color: #61dafb;
+}
+.react-multiple-carousel__arrow {
+  background: rgba(161, 161, 161, 0.3);
 }
 
 @keyframes App-logo-spin {

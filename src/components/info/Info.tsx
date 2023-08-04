@@ -2,12 +2,14 @@ import React from 'react'
 import styles from './Info.module.css'
 export default function Info() {
   return (
-    <section className={`${styles.font} p-8`}>
+    <section
+      className={`${styles.font} p-8 w-2/5 border-solid border-r-1`}
+    >
       <h1 className='text-4xl'>Kim Ga Jung</h1>
       <span className='text-lg text-gray-500 underline underline-offset-4'>
         FE Developer
       </span>
-      <article>
+      <article className='mt-8'>
         <span className='text-2xl'>Hello🖐️</span>
         코딩을 통해 가치를 구현하는 프론트엔드 개발자
         <span className='font-semibold '> 김가정</span>
