@@ -1,5 +1,9 @@
 import React from 'react'
-
+import Info from '../components/info/Info'
 export default function Home() {
-  return <div>xx</div>
+  return (
+    <section>
+      <Info />
+    </section>
+  )
 }

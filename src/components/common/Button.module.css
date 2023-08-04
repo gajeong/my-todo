@@ -1,0 +1,6 @@
+.btn:hover {
+  color: var(--color-base);
+  background-color: rgba(161, 161, 161, 0.1);
+  cursor: pointer;
+  border-radius: 8px;
+}
