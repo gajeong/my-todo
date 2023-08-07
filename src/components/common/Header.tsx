@@ -3,6 +3,7 @@ import { TiThMenuOutline } from 'react-icons/ti'
 import { TbCalendarHeart } from 'react-icons/tb'
 import Button from './Button'
 import styles from './header.module.css'
+import { login } from '../../api/firebase'
 
 export default function Header() {
   const [user, setUser] = useState('7rgoong')

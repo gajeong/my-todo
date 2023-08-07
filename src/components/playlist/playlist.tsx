@@ -25,19 +25,14 @@ export default function PlayList({
     async () => await fetch(keyword)
   )
   return (
-    <section className='w-3/5 h-80 px-8 '>
+    <section className='w-3/5 h-fit px-8 '>
       <p className='w-fit bg-gray-100 p-1 text-sm rounded-md italic'>
         #{keyword}
       </p>
       {playlist?.data.items.length && (
         <MultiCarousel>
           {playlist?.data.items.map((item) => (
-            <div>
-              <PlayItem
-                video={item}
-                key={item.id.videoId}
-              />
-            </div>
+            <PlayItem video={item} key={item.id.videoId} />
           ))}
         </MultiCarousel>
       )}

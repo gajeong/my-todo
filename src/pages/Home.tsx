@@ -1,4 +1,3 @@
-import React from 'react'
 import Info from '../components/info/Info'
 import PlayList from '../components/playlist/playlist'
 import { fetchPlayList } from '../api/playlist'
