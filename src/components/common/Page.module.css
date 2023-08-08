@@ -2,11 +2,10 @@
   padding: 1rem;
   border: 1px solid var(--color-light);
   border-radius: 16px;
-  padding: 8px;
 }
 
 .scroll {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 105px);
   overflow: scroll;
 }
 

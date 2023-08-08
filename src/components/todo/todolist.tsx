@@ -45,7 +45,7 @@ export default function TodoList() {
     },
   ]
   return (
-    <main className='border rounded w-2/5 max-sm:w-full '>
+    <main className='border rounded w-2/5 max-sm:w-full m-4 '>
       {data.map((list) => (
         <TodoItem data={list} key={list.id} />
       ))}

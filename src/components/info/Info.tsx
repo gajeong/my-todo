@@ -1,9 +1,8 @@
-import React from 'react'
 import styles from './Info.module.css'
 export default function Info() {
   return (
     <section
-      className={`${styles.font} p-8 w-2/5 border-r-2 h-full`}
+      className={`${styles.font} m-2 p-8 w-2/5 border-r-2 h-full max-md:w-1/2 max-sm:w-full max-sm:border-b-2 max-sm:border-r-0`}
     >
       <h1 className='text-4xl'>Kim Ga Jung</h1>
       <span className='text-lg text-gray-500 underline underline-offset-4'>

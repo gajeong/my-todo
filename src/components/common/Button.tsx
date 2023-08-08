@@ -1,5 +1,16 @@
-import { children } from '../../types/common'
+import { ReactNode } from 'react'
 import styles from './Button.module.css'
-export default function Button({ children }: children) {
-  return <div className={styles.btn}>{children}</div>
+type Props = {
+  children: ReactNode
+  classname?: string
+}
+export default function Button({
+  children,
+  classname,
+}: Props) {
+  return (
+    <div className={`${styles.btn} ${classname}`}>
+      {children}
+    </div>
+  )
 }

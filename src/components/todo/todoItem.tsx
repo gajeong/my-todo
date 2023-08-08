@@ -34,7 +34,7 @@ export default function TodoItem({ data }: Props) {
     <ol className={`p-2 ${styles.container}`}>
       <div className='flex items-center '>
         <li
-          className={`text-sm px-2  rounded flex-none text-white`}
+          className={`text-sm py-0 px-2 text rounded flex-none text-white leading-5`}
           style={{ background: categoryColor }}
         >
           {category}

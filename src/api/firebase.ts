@@ -39,8 +39,8 @@ export function login() {
     .catch(console.error)
 }
 
-export function read(url: string) {
-  get(child(dbRef, url))
+export async function read(url: string) {
+  await get(child(dbRef, url))
     .then((snapshot) => {
       if (snapshot.exists()) {
         return snapshot.val()
