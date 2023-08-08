@@ -6,6 +6,7 @@ function readCategory() {
 }
 
 function writeCategory(data: Category) {
+  console.log(data)
   return write('todo/category', data)
 }
 

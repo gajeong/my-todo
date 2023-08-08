@@ -21,6 +21,7 @@ body {
   font-family: 'Signika Negative', 'SUIT-Regular',
     -apple-system, sans-serif;
   line-height: 1.75rem;
+  height: 100vh;
 }
 * {
   box-sizing: border-box;
@@ -35,4 +36,10 @@ code {
 }
 li {
   list-style: none;
+}
+
+input {
+  width: fit-content;
+  outline: none;
+  border-bottom: 1px solid var(--color-light);
 }

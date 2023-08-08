@@ -11,7 +11,7 @@ export default function ToDo() {
     setOpen((prev) => !prev)
   }
   return (
-    <section className='h-full relative'>
+    <section className='relative'>
       <h1 className='text-3xl text-center underline underline-offset-4 my-6'>
         Create a Life Full Of Values
       </h1>

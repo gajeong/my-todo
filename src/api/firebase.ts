@@ -51,6 +51,6 @@ export async function read(url: string) {
     .catch(console.error)
 }
 
-export function write(url: string, data: Object) {
-  set(ref(db, url), data)
+export async function write(url: string, data: Object) {
+  await set(ref(db, url), data)
 }

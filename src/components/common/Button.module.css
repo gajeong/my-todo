@@ -1,9 +1,8 @@
 .btn {
-  width: fit-content;
   padding: 0.3rem 0.5rem;
+  text-align: center;
 }
 .btn:hover {
-  width: fit-content;
   color: var(--color-base);
   background-color: rgba(161, 161, 161, 0.1);
   cursor: pointer;
