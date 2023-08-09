@@ -7,7 +7,9 @@ export default function Page({ children }: children) {
       className={`${styles.container} h-full shadow-md`}
     >
       <Header />
-      <div className={`${styles.scroll}`}>{children}</div>
+      <div className={`${styles.scroll}`}>
+        <main>{children}</main>
+      </div>
     </main>
   )
 }
