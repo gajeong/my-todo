@@ -2,7 +2,12 @@ import Modal from '../common/Modal'
 
 import Button from '../common/Button'
 import { AiOutlineDelete } from 'react-icons/ai'
-import { useState, ChangeEvent, useCallback } from 'react'
+import {
+  useState,
+  ChangeEvent,
+  useCallback,
+  MouseEvent,
+} from 'react'
 import { v4 as uuid } from 'uuid'
 import { read } from '../../api/firebase'
 import { useImmer } from 'use-immer'
@@ -22,6 +27,8 @@ export default function CategoryList({
   open: boolean
   setOpen: (state: boolean) => void
 }) {
+  const [colorModal, setColorModal] = useState(false)
+  const [position, setPosition] = useState([0, 0])
   const [categories, updateCategories] = useImmer<
     Category[]
   >([])
@@ -34,7 +41,6 @@ export default function CategoryList({
     { staleTime: 1000 * 60 }
   )
   const addList = useCallback(() => {
-    console.log('???')
     updateCategories((draft) => {
       draft.push({ id: uuid(), name: '', color: '#fff' })
     })
@@ -52,6 +58,12 @@ export default function CategoryList({
     },
     []
   )
+
+  const handlePalette = (e: MouseEvent) => {
+    console.log(e)
+    setPosition([e.clientX, e.clientY])
+    setColorModal(true)
+  }
 
   return (
     <div className='absolute w-[250px] right-[10px] top-[10px]'>
@@ -73,6 +85,7 @@ export default function CategoryList({
                       ? 'border'
                       : ''
                   }`}
+                  onClick={handlePalette}
                 ></p>
                 <p className='px-2'>
                   <input
@@ -95,8 +108,13 @@ export default function CategoryList({
             추가하기
           </li>
         </Button>
+        <ColorPalette
+          open={colorModal}
+          setOpen={setColorModal}
+          position={position}
+          classnames='absolute'
+        />
       </Modal>
-      <ColorPalette />
     </div>
   )
 }
