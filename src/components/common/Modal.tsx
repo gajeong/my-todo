@@ -13,7 +13,7 @@ export default function Modal({
   setOpen,
 }: Props) {
   return (
-    <section>
+    <section className='bg-white'>
       {open && (
         <div>
           <div className='relative shadow-lg p-4 z-20'>

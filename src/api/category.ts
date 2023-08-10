@@ -1,13 +1,20 @@
 import { Category } from '../types/category'
-import { read, write } from './firebase'
+import { read, write, db } from './firebase'
+import { set, ref, get } from 'firebase/database'
 
-function readCategory() {
-  return read('todo/category')
+async function readCategory(): Promise<Category[]> {
+  return await get(ref(db, 'todo/category')).then(
+    (snapshot) => {
+      if (snapshot.exists()) {
+        return Object.values(snapshot.val())
+      }
+      return []
+    }
+  )
 }
 
-function writeCategory(data: Category) {
-  console.log(data)
-  return write('todo/category', data)
+function addCategory(data: Category) {
+  return write(`todo/category/${data.id}`, data)
 }
 
-export { readCategory, writeCategory }
+export { readCategory, addCategory }

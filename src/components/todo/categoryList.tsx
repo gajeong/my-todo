@@ -2,9 +2,18 @@ import Modal from '../common/Modal'
 
 import Button from '../common/Button'
 import { AiOutlineDelete } from 'react-icons/ai'
-import { useState, ChangeEvent } from 'react'
+import { useState, ChangeEvent, useCallback } from 'react'
 import { v4 as uuid } from 'uuid'
-import { writeCategory } from '../../api/category'
+import { read } from '../../api/firebase'
+import { useImmer } from 'use-immer'
+import { produce } from 'immer'
+import { useQuery } from 'react-query'
+import { Category } from '../../types/category'
+import {
+  addCategory,
+  readCategory,
+} from '../../api/category'
+import ColorPalette from './colorPalette'
 
 export default function CategoryList({
   open,
@@ -13,50 +22,71 @@ export default function CategoryList({
   open: boolean
   setOpen: (state: boolean) => void
 }) {
-  const data = [
-    { id: 'sfef', name: '공부', color: '#9ED2BE' },
-    { id: '222', name: '업무', color: '#9E9FA5' },
-    { id: 'sfeg', name: '여가', color: '#FFC6AC' },
-  ]
+  const [categories, updateCategories] = useImmer<
+    Category[]
+  >([])
+  const { isLoading, data, error } = useQuery(
+    ['categories', 'read'],
+    async () =>
+      await readCategory().then((res) => {
+        updateCategories([...res])
+      }),
+    { staleTime: 1000 * 60 }
+  )
+  const addList = useCallback(() => {
+    console.log('???')
+    updateCategories((draft) => {
+      draft.push({ id: uuid(), name: '', color: '#fff' })
+    })
+  }, [])
 
-  const [categories, setCategories] = useState(data)
-  const addList = () => {
-    const item = { id: uuid(), name: '', color: '#fff' }
-    setCategories([...categories, item])
-  }
-
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement>
-  ) => {}
+  const handleChange = useCallback(
+    (id: string, e: ChangeEvent<HTMLInputElement>) => {
+      const { value } = e.target
+      updateCategories((draft) => {
+        const category = draft.find(
+          (item) => item.id === id
+        )
+        if (category) category.name = value
+      })
+    },
+    []
+  )
 
   return (
     <div className='absolute w-[250px] right-[10px] top-[10px]'>
       <Modal open={open} setOpen={setOpen}>
-        {categories.map((category) => (
-          <li
-            className='flex items-center justify-between py-1'
-            key={category.id}
-          >
-            <div className='flex items-center'>
-              <p
-                style={{ background: category.color }}
-                className={`w-[15px] h-[15px] rounded ${
-                  category.color === '#fff' ? 'border' : ''
-                }`}
-              ></p>
-              <p className='px-2'>
-                {category.name ? (
-                  category.name
-                ) : (
+        <h1 className='font-semibold text-center'>
+          카테고리
+        </h1>
+        {categories &&
+          categories?.map((category) => (
+            <li
+              className='flex items-center justify-between py-1'
+              key={category.id}
+            >
+              <div className='flex items-center'>
+                <p
+                  style={{ background: category.color }}
+                  className={`w-[15px] h-[15px] rounded ${
+                    category.color === '#fff'
+                      ? 'border'
+                      : ''
+                  }`}
+                ></p>
+                <p className='px-2'>
                   <input
-                    onBlur={() => writeCategory(category)}
+                    value={category.name}
+                    onChange={(e) =>
+                      handleChange(category.id, e)
+                    }
+                    onBlur={() => addCategory(category)}
                   />
-                )}
-              </p>
-            </div>
-            <AiOutlineDelete fill='#aaa' />
-          </li>
-        ))}
+                </p>
+              </div>
+              <AiOutlineDelete fill='#aaa' />
+            </li>
+          ))}
         <Button classname='border rounded'>
           <li
             className='cursor-pointer px-4'
@@ -66,6 +96,7 @@ export default function CategoryList({
           </li>
         </Button>
       </Modal>
+      <ColorPalette />
     </div>
   )
 }

@@ -12,22 +12,26 @@ import {
   set,
 } from 'firebase/database'
 
-// TODO: Add SDKs for Firebase products that you want to use
+// TODO: Add SDKs for Firebase products that you want to usei
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+// Your web app's Firebase configurationi
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_PROJECT_ID,
   databaseURL: process.env.REACT_APP_FIREBASE_DATABASE,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId:
+    process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 }
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
 const provider = new GoogleAuthProvider()
 const auth = getAuth()
-const db = getDatabase(app)
+export const db = getDatabase(app)
 const dbRef = ref(getDatabase(app))
 
 export function login() {
@@ -40,15 +44,16 @@ export function login() {
 }
 
 export async function read(url: string) {
-  await get(child(dbRef, url))
-    .then((snapshot) => {
-      if (snapshot.exists()) {
-        return snapshot.val()
-      } else {
-        console.log('No Data')
-      }
-    })
-    .catch(console.error)
+  try {
+    const snapshot = await get(child(dbRef, url))
+    if (snapshot.exists()) {
+      return snapshot.val()
+    } else {
+      return []
+    }
+  } catch (error) {
+    throw error
+  }
 }
 
 export async function write(url: string, data: Object) {

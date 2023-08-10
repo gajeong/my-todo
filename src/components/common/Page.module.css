@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 0.3rem 1rem 1rem;
   border: 1px solid var(--color-light);
   border-radius: 16px;
 }
@@ -12,8 +12,8 @@
   overflow-x: hidden;
 }
 
-.scroll main {
-  height: calc(100vh - 134px);
+.scroll > main {
+  height: calc(100vh - 150px);
 }
 
 * {
