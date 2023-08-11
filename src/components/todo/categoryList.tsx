@@ -12,11 +12,16 @@ import { v4 as uuid } from 'uuid'
 import { read } from '../../api/firebase'
 import { useImmer } from 'use-immer'
 import { produce } from 'immer'
-import { useQuery } from 'react-query'
+import {
+  useMutation,
+  useQuery,
+  useQueryClient,
+} from 'react-query'
 import { Category } from '../../types/category'
 import {
   addCategory,
   readCategory,
+  delCategory,
 } from '../../api/category'
 import ColorPalette from './colorPalette'
 
@@ -27,6 +32,7 @@ export default function CategoryList({
   open: boolean
   setOpen: (state: boolean) => void
 }) {
+  const queryClient = useQueryClient()
   const [colorModal, setColorModal] = useState(false)
   const [position, setPosition] = useState([0, 0])
   const [enterData, setEnterData] = useState<Category>({
@@ -64,18 +70,26 @@ export default function CategoryList({
     []
   )
 
+  const deleteCategoryQuery = useMutation(
+    (id: string) => delCategory(id),
+    {
+      onSuccess: () => {
+        queryClient.invalidateQueries(['categories'])
+      },
+    }
+  )
+
   const handlePalette = (e: MouseEvent, data: Category) => {
     setEnterData(data)
     let modalHeight =
       e.currentTarget.parentElement?.parentElement
         ?.parentElement?.clientHeight || 0
-    console.log(e.clientY - modalHeight)
-    setPosition([e.clientX, e.clientY - modalHeight + 215])
+    setPosition([e.clientX, e.clientY + 30])
     setColorModal(true)
   }
 
   return (
-    <div className='absolute w-[250px] right-[10px] top-[10px]'>
+    <div className='absolute w-[250px] right-[10px] top-[30px]'>
       <Modal open={open} setOpen={setOpen}>
         <h1 className='font-semibold text-center'>
           카테고리
@@ -108,7 +122,12 @@ export default function CategoryList({
                   />
                 </p>
               </div>
-              <AiOutlineDelete fill='#aaa' />
+              <AiOutlineDelete
+                fill='#aaa'
+                onClick={() =>
+                  deleteCategoryQuery.mutate(category.id)
+                }
+              />
             </li>
           ))}
         <Button classname='border rounded'>

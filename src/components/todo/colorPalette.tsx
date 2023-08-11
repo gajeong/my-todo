@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import {
   useMutation,
   useQuery,
@@ -24,6 +24,7 @@ export default function ColorPalette({
   enterData,
 }: Props) {
   const queryClient = useQueryClient()
+  const componentRef = useRef<HTMLDivElement | null>(null)
   const {
     isLoading,
     data: colors,
@@ -52,10 +53,17 @@ export default function ColorPalette({
 
   const [height, setHeight] = useState(0)
   useEffect(() => {
-    position && setHeight(position[1])
+    if (componentRef.current)
+      position &&
+        setHeight(
+          position[1] -
+            componentRef.current.clientHeight +
+            10
+        )
   }, [position])
   return (
     <div
+      ref={componentRef}
       className={`${classnames}`}
       style={{ top: height }}
     >
