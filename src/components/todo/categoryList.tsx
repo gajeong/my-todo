@@ -29,6 +29,11 @@ export default function CategoryList({
 }) {
   const [colorModal, setColorModal] = useState(false)
   const [position, setPosition] = useState([0, 0])
+  const [enterData, setEnterData] = useState<Category>({
+    id: '',
+    color: '#fff',
+    name: '',
+  })
   const [categories, updateCategories] = useImmer<
     Category[]
   >([])
@@ -59,9 +64,13 @@ export default function CategoryList({
     []
   )
 
-  const handlePalette = (e: MouseEvent) => {
-    console.log(e)
-    setPosition([e.clientX, e.clientY])
+  const handlePalette = (e: MouseEvent, data: Category) => {
+    setEnterData(data)
+    let modalHeight =
+      e.currentTarget.parentElement?.parentElement
+        ?.parentElement?.clientHeight || 0
+    console.log(e.clientY - modalHeight)
+    setPosition([e.clientX, e.clientY - modalHeight + 215])
     setColorModal(true)
   }
 
@@ -85,7 +94,9 @@ export default function CategoryList({
                       ? 'border'
                       : ''
                   }`}
-                  onClick={handlePalette}
+                  onClick={(e) =>
+                    handlePalette(e, category)
+                  }
                 ></p>
                 <p className='px-2'>
                   <input
@@ -113,6 +124,7 @@ export default function CategoryList({
           setOpen={setColorModal}
           position={position}
           classnames='absolute'
+          enterData={enterData}
         />
       </Modal>
     </div>
