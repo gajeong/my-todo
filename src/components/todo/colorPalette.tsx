@@ -73,7 +73,7 @@ export default function ColorPalette({
             {colors?.map((color, idx) => (
               <li
                 key={idx}
-                className={`w-[20px] h-[20px] rounded-sm cursor-pointer`}
+                className={`w-[20px] h-[20px] rounded-sm cursor-pointer hover:brightness-90`}
                 style={{ background: color }}
                 onClick={() => changeColor(color)}
               ></li>

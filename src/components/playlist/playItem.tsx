@@ -5,7 +5,7 @@ type props = {
 }
 export default function PlayItem({ video }: props) {
   return (
-    <div className='px-2 h-full py-4 cursor-pointer hover:shadow-md font'>
+    <div className='px-2 h-full py-4 cursor-pointer hover:shadow-lg font'>
       <img
         className='w-full h-100 bg-cover'
         src={video.snippet.thumbnails.high.url}

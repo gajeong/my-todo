@@ -1,4 +1,3 @@
-import { fetchPlayList } from '../../api/playlist'
 import { QueryObserverResult, useQuery } from 'react-query'
 import {
   VideoList,
@@ -7,25 +6,26 @@ import {
 } from '../../types/video'
 import PlayItem from './playItem'
 import MultiCarousel from '../common/MultiCarousel'
-
+import { fetchPlayList } from '../../api/playlist'
 export default function PlayList({
   keyword,
-  fetch,
+  searchKey,
 }: {
   keyword: string
-  fetch: (keyword: string) => Promise<VideoList>
+  searchKey: string
 }) {
   const {
     isLoading,
-    isError,
     data: playlist,
     error,
   }: QueryObserverResult<VideoList> = useQuery(
-    'playlist',
-    async () => await fetch(keyword)
+    ['playlist', searchKey],
+    async () => {
+      return await fetchPlayList(searchKey)
+    }
   )
   return (
-    <section className='w-3/5 h-fit px-4 m-4 max-md:w-1/2'>
+    <section>
       <p className='w-fit bg-gray-100 p-1 text-sm rounded-md italic'>
         #{keyword}
       </p>
