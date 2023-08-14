@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import './reset.css';
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Playfair:wght@400;700&family=Red+Hat+Mono&family=Signika+Negative&display=swap');
 @font-face {
   font-family: 'SUIT-Regular';
@@ -22,6 +23,7 @@ body {
     -apple-system, sans-serif;
   line-height: 1.75rem;
   height: 100vh;
+  accent-color: var(--color-bright);
 }
 #root {
   height: 100%;
@@ -42,7 +44,64 @@ li {
 }
 
 input {
-  width: fit-content;
+  display: block;
+  width: 100%;
   outline: none;
   border-bottom: 1px solid var(--color-light);
+}
+
+option {
+  background-color: none;
+}
+option:hover {
+  background-color: none;
+}
+
+select option:hover {
+  background-color: transparent; /* 배경색을 투명하게 설정하거나 필요한 스타일을 적용하세요 */
+  /* 기타 스타일 속성을 추가로 수정하세요 */
+}
+
+.text-gray {
+  color: var(--color-bright);
+}
+
+.react-datepicker {
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  font-family: 'SUIT-Regular' !important;
+  font-size: 1rem;
+  color: #333;
+}
+
+.react-datepicker__day--selected {
+  background-color: var(--color-bright) !important;
+}
+
+.react-datepicker__header {
+  border: none !important;
+  outline: 0px;
+}
+
+.react-datepicker__navigation {
+  margin-top: 6px;
+}
+
+.react-time-picker__inputGroup {
+  display: flex !important;
+}
+.react-time-picker__inputGroup__input {
+  display: block;
+  min-width: 30px !important;
+  text-align: center;
+}
+
+.react-time-picker__inputGroup__input {
+}
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

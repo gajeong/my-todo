@@ -5,8 +5,11 @@ import styles from './ToDo.module.css'
 import { TbCategory } from 'react-icons/tb'
 import CategoryList from '../components/todo/categoryList'
 import { BsCaretLeft, BsCaretRight } from 'react-icons/bs'
+import { BsCalendar2Plus } from 'react-icons/bs'
+import AddTodoModal from '../components/todo/addTodoModal'
 export default function ToDo() {
   const [date, setDate] = useState(new Date())
+  const [addModalState, setAddModalState] = useState(false)
   const [open, setOpen] = useState(false)
   const openModal = (e: MouseEvent) => {
     e.stopPropagation()
@@ -51,8 +54,17 @@ export default function ToDo() {
           <TbCategory stroke='#a1a1a1' size={20} />
         </Button>
       </div>
-      <TodoList />
+      <BsCalendar2Plus
+        className=''
+        onClick={() => setAddModalState(true)}
+      />
+      <TodoList date={date} />
       <CategoryList open={open} setOpen={setOpen} />
+      <AddTodoModal
+        date={date}
+        setOpen={setAddModalState}
+        open={addModalState}
+      />
     </section>
   )
 }

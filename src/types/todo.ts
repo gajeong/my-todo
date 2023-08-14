@@ -1,10 +1,11 @@
 export interface Todo {
-  id: number
+  id: string
   category: string
   title: string
+  date: Date
   start: string
   end: string
   status: number
-  repeat: number
+  repeat: boolean
   memo: string
 }
