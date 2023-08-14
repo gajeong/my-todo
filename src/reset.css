@@ -35,8 +35,3 @@ ol {
   padding-left: 0;
   list-style: none;
 }
-
-select option:hover {
-  background-color: transparent; /* 배경색을 투명하게 설정하거나 필요한 스타일을 적용하세요 */
-  /* 기타 스타일 속성을 추가로 수정하세요 */
-}
