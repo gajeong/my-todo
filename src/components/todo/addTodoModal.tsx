@@ -21,10 +21,6 @@ export default function AddTodoModal({
   open,
   setOpen,
 }: Props) {
-  const [categories, updateCategories] = useImmer<
-    Category[]
-  >([])
-
   const [todo, setTodo] = useState({
     id: uuid(),
     category: '',
@@ -37,15 +33,18 @@ export default function AddTodoModal({
     memo: '',
   })
 
-  const { isLoading, data, error } = useQuery(
+  const [categories, updateCategories] = useImmer<
+    Category[]
+  >([])
+  const { isLoading, data, isError } = useQuery(
     ['categories', 'read'],
     async () =>
       await readCategory().then((res) => {
         updateCategories([...res])
+        return res
       }),
     { staleTime: 1000 * 60 }
   )
-
   const handleChange = (
     e: ChangeEvent<
       | HTMLInputElement
@@ -65,32 +64,40 @@ export default function AddTodoModal({
       <Modal setOpen={setOpen} open={open}>
         <h3 className='text-gray'>ToDo 추가</h3>
         <hr />
-        <dd className='flex py-2'>
-          📂
-          <select
-            className='outline-1 outline-offset-4 outline-[#a1a1a1] px-4 border hover:cursor-pointer rounded'
-            name='category'
-            onChange={handleChange}
-          >
-            {categories.map((category) => (
-              <option
-                className='outline-none text-white'
-                style={{ background: category.color }}
-              >
-                <li style={{ background: category.color }}>
-                  {category.name}
-                </li>
-              </option>
-            ))}
-          </select>
-          <input
-            type='text'
-            className='block grow px-2'
-            name='title'
-            onChange={handleChange}
-            value={todo.title}
-          />
-        </dd>
+        {isLoading && <span>loading ...</span>}
+        {isError && <span>error ...</span>}
+        {categories.length && (
+          <dd className='flex py-2'>
+            📂
+            <select
+              className='outline-1 outline-offset-4 outline-[#a1a1a1] px-4 border hover:cursor-pointer rounded'
+              name='category'
+              onChange={handleChange}
+            >
+              {categories?.map((category) => (
+                <option
+                  key={category.id}
+                  className='outline-none text-white'
+                  style={{ background: category.color }}
+                >
+                  <li
+                    style={{ background: category.color }}
+                  >
+                    {category.name}
+                  </li>
+                </option>
+              ))}
+            </select>
+            <input
+              type='text'
+              className='block grow px-2'
+              name='title'
+              onChange={handleChange}
+              value={todo.title}
+            />
+          </dd>
+        )}
+
         <dd className='py-2'>
           📆 <Calendar selected={date} />
         </dd>

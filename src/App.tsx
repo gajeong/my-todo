@@ -13,7 +13,7 @@ function App() {
     <Page>
       <QueryClientProvider client={queryClient}>
         <Outlet />
-        {/* <ReactQueryDevtools /> */}
+        <ReactQueryDevtools />
       </QueryClientProvider>
     </Page>
   )

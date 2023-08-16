@@ -18,6 +18,10 @@ body {
     'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   color: #1a1a1a;
   font-family: 'Signika Negative', 'SUIT-Regular',
     -apple-system, sans-serif;

@@ -9,9 +9,7 @@ import {
   MouseEvent,
 } from 'react'
 import { v4 as uuid } from 'uuid'
-import { read } from '../../api/firebase'
 import { useImmer } from 'use-immer'
-import { produce } from 'immer'
 import {
   useMutation,
   useQuery,
@@ -43,11 +41,12 @@ export default function CategoryList({
   const [categories, updateCategories] = useImmer<
     Category[]
   >([])
-  const { isLoading, data, error } = useQuery(
+  const { isLoading, data, isError } = useQuery(
     ['categories', 'read'],
     async () =>
       await readCategory().then((res) => {
         updateCategories([...res])
+        return res
       }),
     { staleTime: 1000 * 60 }
   )

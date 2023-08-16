@@ -32,9 +32,11 @@ export default function ToDo() {
             })
           }
         />
+
         {new Intl.DateTimeFormat('ko')
           .format(date)
           .slice(0, -1)}
+
         <BsCaretRight
           className='fill-[#a1a1a1] hover:fill-[#1a1a1a]'
           onClick={() =>

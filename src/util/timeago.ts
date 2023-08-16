@@ -6,5 +6,3 @@ register('ko', koLocale)
 export function formatAgo(date: string, lang = 'eb_US') {
   return format(date, lang)
 }
-
-export function getDate(date) {}
