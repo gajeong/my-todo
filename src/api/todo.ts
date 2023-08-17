@@ -1,4 +1,5 @@
 import { Todo } from '../types/todo'
+import firebase from 'firebase/compat/app'
 import { write, db } from './firebase'
 import {
   set,
@@ -6,10 +7,24 @@ import {
   get,
   update,
   remove,
+  getDatabase,
+  onValue,
 } from 'firebase/database'
 
 function addTodo(data: Todo) {
-  return write(`todo/${data.date}/${data.id}`, data)
+  return write(`todo/${data.date}/${data.id}`, {
+    ...data,
+  })
 }
 
-export { addTodo }
+async function readTodo(date: string): Promise<Todo[]> {
+  return await get(ref(db, `todo/${date}`)).then(
+    (snapshot) => {
+      if (snapshot.exists())
+        return Object.values(snapshot.val())
+      return []
+    }
+  )
+}
+
+export { addTodo, readTodo }

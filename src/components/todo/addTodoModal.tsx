@@ -1,50 +1,57 @@
 import { useState, ChangeEvent } from 'react'
 import Modal from '../common/Modal'
-import { useQuery, useQueryClient } from 'react-query'
+import {
+  useMutation,
+  useQuery,
+  useQueryClient,
+} from 'react-query'
 import { readCategory } from '../../api/category'
-import { useImmer } from 'use-immer'
-import { Category } from '../../types/category'
+
 import styles from './addTodoModal.module.css'
 import Calendar from '../common/Calendar'
 import Button from '../common/Button'
 import TimePickerComponent from '../common/TimePicker'
 import { v4 as uuid } from 'uuid'
 import { addTodo } from '../../api/todo'
-
+import { getDate } from '../../util/timeago'
+type Value = string | null
 type Props = {
   date: Date
   open: boolean
   setOpen: (state: boolean) => void
 }
+
 export default function AddTodoModal({
   date,
   open,
   setOpen,
 }: Props) {
-  const [todo, setTodo] = useState({
+  const initData = {
     id: uuid(),
     category: '',
     title: '',
+    date: getDate(date),
     start: '',
-    date: date,
     end: '',
     status: 0,
     repeat: false,
     memo: '',
-  })
-
-  const [categories, updateCategories] = useImmer<
-    Category[]
-  >([])
+  }
+  const queryClient = useQueryClient()
   const { isLoading, data, isError } = useQuery(
     ['categories', 'read'],
     async () =>
       await readCategory().then((res) => {
-        updateCategories([...res])
+        setTodo({
+          ...todo,
+          category: data ? data[0].id : '',
+        })
         return res
       }),
     { staleTime: 1000 * 60 }
   )
+
+  const [todo, setTodo] = useState(initData)
   const handleChange = (
     e: ChangeEvent<
       | HTMLInputElement
@@ -56,9 +63,22 @@ export default function AddTodoModal({
     setTodo({ ...todo, [name]: value })
   }
 
-  const handleAdd = () => {
-    addTodo(todo).then(() => setOpen(false))
-  }
+  const handleAdd = useMutation(
+    async () => {
+      if (!todo.category)
+        await addTodo({
+          ...todo,
+          category: data ? data[0].id : '',
+        })
+    },
+    {
+      onSuccess: () => {
+        queryClient.invalidateQueries(['todo'])
+        setTodo(initData)
+      },
+    }
+  )
+
   return (
     <div className='w-fit border absolute top-0 rounded'>
       <Modal setOpen={setOpen} open={open}>
@@ -66,7 +86,7 @@ export default function AddTodoModal({
         <hr />
         {isLoading && <span>loading ...</span>}
         {isError && <span>error ...</span>}
-        {categories.length && (
+        {data && (
           <dd className='flex py-2'>
             📂
             <select
@@ -74,17 +94,14 @@ export default function AddTodoModal({
               name='category'
               onChange={handleChange}
             >
-              {categories?.map((category) => (
+              {data?.map((category) => (
                 <option
                   key={category.id}
                   className='outline-none text-white'
+                  value={category.id}
                   style={{ background: category.color }}
                 >
-                  <li
-                    style={{ background: category.color }}
-                  >
-                    {category.name}
-                  </li>
+                  {category.name}
                 </option>
               ))}
             </select>
@@ -106,13 +123,19 @@ export default function AddTodoModal({
           <TimePickerComponent
             value={todo.start}
             name='start'
-            onChange={() => setTodo}
+            onChange={(newValue) => {
+              if (newValue)
+                setTodo({ ...todo, start: newValue })
+            }}
           />{' '}
           ~{' '}
           <TimePickerComponent
             value={todo.end}
             name='end'
-            onChange={() => setTodo}
+            onChange={(newValue) => {
+              if (newValue)
+                setTodo({ ...todo, end: newValue })
+            }}
           />
         </dd>
         <dd>
@@ -122,11 +145,12 @@ export default function AddTodoModal({
             style={{ resize: 'none' }}
             className={`w-full p-2 text-sm rounded ${styles['bg-yellow']}`}
             name='memo'
+            value={todo.memo}
             onChange={handleChange}
           />
         </dd>
 
-        <div onClick={handleAdd}>
+        <div onClick={() => handleAdd.mutate()}>
           <Button classname='border'>추가</Button>
         </div>
       </Modal>

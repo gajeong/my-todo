@@ -2,7 +2,7 @@ export interface Todo {
   id: string
   category: string
   title: string
-  date: Date
+  date: string
   start: string
   end: string
   status: number
