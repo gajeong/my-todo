@@ -65,11 +65,14 @@ export default function AddTodoModal({
 
   const handleAdd = useMutation(
     async () => {
-      if (!todo.category)
-        await addTodo({
-          ...todo,
-          category: data ? data[0].id : '',
-        })
+      await addTodo(
+        !todo.category
+          ? {
+              ...todo,
+              category: data ? data[0].id : '',
+            }
+          : todo
+      )
     },
     {
       onSuccess: () => {

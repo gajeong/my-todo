@@ -27,4 +27,9 @@ async function readTodo(date: string): Promise<Todo[]> {
   )
 }
 
-export { addTodo, readTodo }
+async function delTodo(date: string, id: string) {
+  console.log(date, id)
+  return remove(ref(db, `todo/${date}/${id}`))
+}
+
+export { addTodo, readTodo, delTodo }

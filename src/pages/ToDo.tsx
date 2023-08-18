@@ -6,10 +6,12 @@ import { TbCategory } from 'react-icons/tb'
 import CategoryList from '../components/todo/categoryList'
 import { BsCaretLeft, BsCaretRight } from 'react-icons/bs'
 import { BsCalendar2Plus } from 'react-icons/bs'
+import { RiDeleteRow } from 'react-icons/ri'
 import AddTodoModal from '../components/todo/addTodoModal'
 export default function ToDo() {
   const [date, setDate] = useState(new Date())
   const [addModalState, setAddModalState] = useState(false)
+  const [delStatus, setDelState] = useState(false)
   const [open, setOpen] = useState(false)
   const openModal = (e: MouseEvent) => {
     e.stopPropagation()
@@ -56,11 +58,17 @@ export default function ToDo() {
           <TbCategory stroke='#a1a1a1' size={20} />
         </Button>
       </div>
-      <BsCalendar2Plus
-        className=''
-        onClick={() => setAddModalState(true)}
-      />
-      <TodoList date={date} />
+      <div className='flex justify-between px-2 py-1'>
+        <RiDeleteRow
+          fill='#aaa'
+          onClick={() => setDelState((prev) => !prev)}
+        />
+        <BsCalendar2Plus
+          className=''
+          onClick={() => setAddModalState(true)}
+        />
+      </div>
+      <TodoList date={date} delStatus={delStatus} />
       <CategoryList open={open} setOpen={setOpen} />
       <AddTodoModal
         date={date}

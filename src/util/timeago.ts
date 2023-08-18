@@ -10,9 +10,9 @@ export function formatAgo(date: string, lang = 'eb_US') {
 export function getDate(date: Date) {
   let year = String(date.getFullYear())
   let month =
-    date.getMonth() < 10
-      ? '0' + date.getMonth()
-      : date.getMonth()
+    date.getMonth() < 9
+      ? '0' + (date.getMonth() + 1)
+      : date.getMonth() + 1
   let day =
     date.getDate() < 10
       ? '0' + date.getDate()

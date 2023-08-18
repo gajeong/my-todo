@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { TiThMenuOutline } from 'react-icons/ti'
 import { TbCalendarHeart } from 'react-icons/tb'
+import { PiNotepadBold } from 'react-icons/pi'
 import Button from './Button'
 import styles from './header.module.css'
 import { login } from '../../api/firebase'
@@ -24,6 +25,15 @@ export default function Header() {
         >
           <TiThMenuOutline />
           <p className='px-2'>Menu</p>
+        </div>
+      </Button>
+      <Button>
+        <div
+          className={styles.item}
+          onClick={() => navigation('/posts')}
+        >
+          <PiNotepadBold />
+          <p className='px-2'>Post</p>
         </div>
       </Button>
       <Button>

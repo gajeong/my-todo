@@ -5,9 +5,15 @@ import { useQuery } from 'react-query'
 import { readTodo } from '../../api/todo'
 import { getDate } from '../../util/timeago'
 
-export default function TodoList({ date }: { date: Date }) {
+export default function TodoList({
+  date,
+  delStatus,
+}: {
+  date: Date
+  delStatus: boolean
+}) {
   const { isLoading, data, isError } = useQuery(
-    ['todo'],
+    ['todo', date],
     async () =>
       await readTodo(getDate(date)).then((res) => res),
     {
@@ -19,7 +25,12 @@ export default function TodoList({ date }: { date: Date }) {
       <main className='border h-fit rounded w-2/5 max-sm:w-full my-2 '>
         {data &&
           data?.map((list) => (
-            <TodoItem data={list} key={list.id} />
+            <TodoItem
+              date={date}
+              data={list}
+              key={list.id}
+              delStatus={delStatus}
+            />
           ))}
       </main>
     </section>
