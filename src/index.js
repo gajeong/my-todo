@@ -8,7 +8,8 @@ import {
 import App from './App'
 import Home from './pages/Home'
 import ToDo from './pages/ToDo'
-import Page from './components/common/Page'
+import Posts from './pages/Posts'
+import CreatePost from './pages/CreatePost'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root')
@@ -25,6 +26,14 @@ const router = createBrowserRouter([
       {
         path: 'todo',
         element: <ToDo />,
+      },
+      {
+        path: 'posts/create',
+        element: <CreatePost />,
+      },
+      {
+        path: 'posts',
+        element: <Posts />,
       },
     ],
   },
