@@ -7,7 +7,6 @@ import {
 import { fetchColor } from '../../api/color'
 import Modal from '../common/Modal'
 import { Category } from '../../types/category'
-import { addCategory } from '../../api/category'
 
 type Props = {
   open: boolean
@@ -15,6 +14,7 @@ type Props = {
   position?: number[]
   classnames?: string
   enterData: Category
+  changeColor: (data: Category) => void
 }
 export default function ColorPalette({
   open,
@@ -22,6 +22,7 @@ export default function ColorPalette({
   position,
   classnames,
   enterData,
+  changeColor,
 }: Props) {
   const queryClient = useQueryClient()
   const componentRef = useRef<HTMLDivElement | null>(null)
@@ -34,21 +35,10 @@ export default function ColorPalette({
     async () => await fetchColor().then((res) => res),
     { staleTime: 1000 * 60 * 24 }
   )
-  const changeCategory = useMutation(
-    (data: Category) => addCategory(data),
-    {
-      onSuccess: () =>
-        queryClient.invalidateQueries(['categories']),
-    }
-  )
 
-  const changeColor = async (color: string) => {
-    const data = { ...enterData, color: color }
-    await changeCategory.mutate(data, {
-      onSuccess: () => {
-        setOpen(false)
-      },
-    })
+  const mutateColor = async (color: string) => {
+    const data: Category = { ...enterData, color: color }
+    await changeColor(data)
   }
 
   const [height, setHeight] = useState(0)
@@ -75,7 +65,7 @@ export default function ColorPalette({
                 key={idx}
                 className={`w-[20px] h-[20px] rounded-sm cursor-pointer hover:brightness-90`}
                 style={{ background: color }}
-                onClick={() => changeColor(color)}
+                onClick={() => mutateColor(color)}
               ></li>
             ))}
           </div>

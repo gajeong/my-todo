@@ -28,7 +28,6 @@ async function readTodo(date: string): Promise<Todo[]> {
 }
 
 async function delTodo(date: string, id: string) {
-  console.log(date, id)
   return remove(ref(db, `todo/${date}/${id}`))
 }
 

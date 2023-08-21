@@ -13,7 +13,7 @@ export default function TodoList({
   delStatus: boolean
 }) {
   const { isLoading, data, isError } = useQuery(
-    ['todo', date],
+    ['todo', getDate(date)],
     async () =>
       await readTodo(getDate(date)).then((res) => res),
     {

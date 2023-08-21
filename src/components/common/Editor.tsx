@@ -17,7 +17,7 @@ export default function Editor() {
   )
   return (
     <main>
-      <Button>게시글 등록</Button>
+      <Button classname='border'>게시글 등록</Button>
       <CKEditor
         editor={ClassicEditor}
         data={data}

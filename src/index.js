@@ -10,6 +10,7 @@ import Home from './pages/Home'
 import ToDo from './pages/ToDo'
 import Posts from './pages/Posts'
 import CreatePost from './pages/CreatePost'
+import Setting from './pages/posts/Setting'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root')
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: 'posts/create',
         element: <CreatePost />,
+      },
+      {
+        path: 'posts/setting',
+        element: <Setting />,
       },
       {
         path: 'posts',

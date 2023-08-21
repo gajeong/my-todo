@@ -49,7 +49,7 @@ export default function TodoItem({
     data: categories,
     isError,
   } = useQuery(
-    ['categories', 'read'],
+    ['todo', 'categories'],
     async () => await readCategory().then((res) => res),
     {
       staleTime: 1000 * 60,
@@ -68,7 +68,10 @@ export default function TodoItem({
     },
     {
       onSuccess: () => {
-        queryClient.invalidateQueries(['todo'])
+        queryClient.invalidateQueries([
+          'todo',
+          'categories',
+        ])
       },
     }
   )
@@ -77,7 +80,10 @@ export default function TodoItem({
     async () => await delTodo(getDate(date), id),
     {
       onSuccess: () => {
-        queryClient.invalidateQueries(['todo'])
+        queryClient.invalidateQueries([
+          'todo',
+          'categories',
+        ])
       },
       onError: () => {
         console.log('err')

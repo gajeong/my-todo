@@ -1,7 +1,7 @@
 import Modal from '../common/Modal'
 
 import Button from '../common/Button'
-import { AiOutlineDelete } from 'react-icons/ai'
+import { RiDeleteBin2Line } from 'react-icons/ri'
 import {
   useState,
   ChangeEvent,
@@ -42,7 +42,7 @@ export default function CategoryList({
     Category[]
   >([])
   const { isLoading, data, isError } = useQuery(
-    ['categories', 'read'],
+    ['todo', 'categories'],
     async () =>
       await readCategory().then((res) => {
         updateCategories([...res])
@@ -73,7 +73,10 @@ export default function CategoryList({
     (id: string) => delCategory(id),
     {
       onSuccess: () => {
-        queryClient.invalidateQueries(['categories'])
+        queryClient.invalidateQueries([
+          'todo',
+          'categories',
+        ])
       },
     }
   )
@@ -85,6 +88,22 @@ export default function CategoryList({
         ?.parentElement?.clientHeight || 0
     setPosition([e.clientX, e.clientY + 30])
     setColorModal(true)
+  }
+
+  const changeCategory = useMutation(
+    (data: Category) => addCategory(data),
+    {
+      onSuccess: () =>
+        queryClient.invalidateQueries(['categories']),
+    }
+  )
+
+  const changeColor = async (data: Category) => {
+    await changeCategory.mutate(data, {
+      onSuccess: () => {
+        setColorModal(false)
+      },
+    })
   }
 
   return (
@@ -121,7 +140,7 @@ export default function CategoryList({
                   />
                 </p>
               </div>
-              <AiOutlineDelete
+              <RiDeleteBin2Line
                 fill='#aaa'
                 onClick={() =>
                   deleteCategoryQuery.mutate(category.id)
@@ -143,6 +162,7 @@ export default function CategoryList({
           position={position}
           classnames='absolute'
           enterData={enterData}
+          changeColor={changeColor}
         />
       </Modal>
     </div>
