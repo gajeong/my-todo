@@ -63,6 +63,8 @@ jobs:
       - name: Build
         run: |
           yarn build
+          env: 
+            CI:""
           cp ./build/index.html ./build/404.html
 
       # 빌드된 파일들(./build)을 gh-pages 브랜치로 배포합니다.
