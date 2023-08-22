@@ -11,22 +11,22 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+    runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - name: Install Dependencies
-      run: npm install 
-    - name: Build
-      run : npm run build
+      - name: Checkout source code.   # 레포지토리 체크아웃
+        uses: actions/checkout@lecture/youtube
+
+      - name: Cache node modules      # node modules 캐싱
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-build-
+            ${{ runner.OS }}-
+
+      - name: Install Dependencies    # 의존 파일 설치
+        run: npm install
+
+      - name: Build                   # React Build
+        run: npm run build
