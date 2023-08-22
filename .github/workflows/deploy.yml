@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: ['lecture/youtube']
+    branches: ['main']
 
 jobs:
   deploy:
