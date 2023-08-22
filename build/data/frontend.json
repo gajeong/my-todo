@@ -1,0 +1,862 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "iq8jamnn5cp5Epn_mkLU3R71Ugk",
+  "nextPageToken": "CBkQAA",
+  "regionCode": "KR",
+  "pageInfo": {
+    "totalResults": 597084,
+    "resultsPerPage": 25
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YJE89AWfOwGHBe8sLNAX609AcEc",
+      "id": {
+        "kind": "youtube#playlist",
+        "playlistId": "PLv2d7VI9OotQ1F92Jp9Ce7ovHEsuRQB3Y"
+      },
+      "snippet": {
+        "publishedAt": "2019-12-29T13:12:52Z",
+        "channelId": "UC_4u-bXaba7yrRz_6x6kb_w",
+        "title": "프론트엔드 강의 - 프론트엔드 개발자 되기 입문편⭐️ (개념 + 클론코딩)",
+        "description": "HTML, CSS, Javascript.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NeEaTeYcFhE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NeEaTeYcFhE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NeEaTeYcFhE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "드림코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-12-29T13:12:52Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "tmCiCp8dewisWpNjKDWEpT7RBPg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "w6TiQJ9SlY4"
+      },
+      "snippet": {
+        "publishedAt": "2023-06-24T07:39:41Z",
+        "channelId": "UCqcqc3TH6KTfGrLwGh__73g",
+        "title": "신입 프론트엔드 개발자 역량 최소기준에 대한 나의 생각",
+        "description": "너무 많은 말을 떠들었네요. 걸러서 들으시길 바랍니다. 링크모음 : https://solo.to/dongjun_yang ‍   인프런강의(AWS서버리스, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/w6TiQJ9SlY4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/w6TiQJ9SlY4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/w6TiQJ9SlY4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "양동준 Yang DongJun",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-06-24T07:39:41Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NrViqJ363Ef38Ha8x7aQxzkgB8w",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "jYJ3ygUfPrU"
+      },
+      "snippet": {
+        "publishedAt": "2023-04-12T04:07:54Z",
+        "channelId": "UCSLrpBAzr-ROVGHQ5EmxnUg",
+        "title": "(Next.js 0강) 요즘 프론트엔드만으로 먹고살기 힘든 이유",
+        "description": "대충 Next.js 13 안쓰면 도태된다고 호들갑떨면서 겁주기) Next.js 강의 오픈 (얼리엑세스 50% 할인 중) ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jYJ3ygUfPrU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jYJ3ygUfPrU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jYJ3ygUfPrU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "코딩애플",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-04-12T04:07:54Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "8yGVeRRY3YfdG-20FPo24S1pH30",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "S9qAtvvvxio"
+      },
+      "snippet": {
+        "publishedAt": "2022-01-30T11:00:13Z",
+        "channelId": "UCnrvn64IsKNr69ep-yFjhwA",
+        "title": "프론트엔드? 백엔드? 진로고민 하시는 분은 보세요 | 개발자 직군별 차이, 성향, 연봉",
+        "description": "새해 복 많이 받으세요!",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/S9qAtvvvxio/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/S9qAtvvvxio/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/S9qAtvvvxio/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "테헤란밸리",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-01-30T11:00:13Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "n86VlOTNVr4GO3ibGFs2Vy0MAVE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "duNh53xrGBY"
+      },
+      "snippet": {
+        "publishedAt": "2023-06-04T09:00:18Z",
+        "channelId": "UChu25pJgVZB3p0dVEgmU0PQ",
+        "title": "프론트엔드 커리어 로드맵, 이 3가지만 알아가시면 충분합니다!",
+        "description": "프론트엔드 #로드맵 #개발자 프론트엔드 커리어 로드맵, 이 3가지만 알아가시면 충분합니다! ▷출연문의 contact us (기업교육 / 책 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/duNh53xrGBY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/duNh53xrGBY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/duNh53xrGBY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "메타코드M",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-06-04T09:00:18Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "K7bCfeRVLxYEx4EksYI99LYapJY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "1w70c7x62BI"
+      },
+      "snippet": {
+        "publishedAt": "2023-04-30T07:00:02Z",
+        "channelId": "UChu25pJgVZB3p0dVEgmU0PQ",
+        "title": "프론트엔드 개발자가 Next.js를 반드시 배워야하는 이유 l 구조, 강점, 현직 활용 Tips",
+        "description": "nextjs #프론트엔드 #코딩 요즘 프론트엔드 다루는 분들이라면 Next.js 많이 들어보셨을 텐데요. 오늘은 Next.js에 대한 모든 것들을 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1w70c7x62BI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1w70c7x62BI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1w70c7x62BI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "메타코드M",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-04-30T07:00:02Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "TeOwr-iM8S34Nr47-g63W-lwyUg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "JQ4Rogr1Ew8"
+      },
+      "snippet": {
+        "publishedAt": "2022-10-20T14:21:52Z",
+        "channelId": "UCku8mOp8y05Cm6sb9Rp0jMQ",
+        "title": "프론트엔드. 대충 API 받아서 화면 뿌리고 끝!?",
+        "description": "내가 알기론 백엔드보다 상대적으로 간단하던데? #프론트엔드 #개발 #백엔드 #자바스크립트.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JQ4Rogr1Ew8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JQ4Rogr1Ew8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JQ4Rogr1Ew8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "프롱트",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-10-20T14:21:52Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "WzcFoKX33zXp0Fpdbs3u1E0cHjE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "aXi1H_4ncvs"
+      },
+      "snippet": {
+        "publishedAt": "2021-06-10T11:01:38Z",
+        "channelId": "UCZ30aWiMw5C8mGcESlAGQbA",
+        "title": "프론트엔드 백엔드란 무엇인가? | 클라이언트 서버란 무엇인가? | 초보자를 위한 쉬운 개념 정리!",
+        "description": "프론트엔드 #백엔드 #프론트엔드백엔드차이 이번시간에는 프런트엔드, 백엔드, 클라이언트, 서버 이러한 용어가 무엇인지에 대해 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/aXi1H_4ncvs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/aXi1H_4ncvs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/aXi1H_4ncvs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "짐코딩 GYM CODING",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-06-10T11:01:38Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "DlXSNIcFg9Thh6kIV2r29o55vVE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ceJMyCfYuwc"
+      },
+      "snippet": {
+        "publishedAt": "2022-02-05T07:29:24Z",
+        "channelId": "UCoN1XLeAX2OazuZdQ9b8U9Q",
+        "title": "네이버 출신 개발자의 프론트엔드 로드맵",
+        "description": "CS지식의 정석 https://inf.run/17Fb ▷C++ 10주완성 코딩테스트 https://inf.run/xZhA [자바스크립트 풀스택 프로그래밍] ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ceJMyCfYuwc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ceJMyCfYuwc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ceJMyCfYuwc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "큰돌의터전",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-02-05T07:29:24Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "HmIEhcBCmuJsxQfHJj7-M8jcWBg",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "e_ZeGvqddy0"
+      },
+      "snippet": {
+        "publishedAt": "2023-03-22T08:27:21Z",
+        "channelId": "UC-T-tp-P4JtdQGpg3bjAO_w",
+        "title": "프론트엔드 개발자 등판! 마지막으로 사용한 명령어는 무엇? 🖥️",
+        "description": "혹시 마지막으로 사용한 명령어가 뭐예요? 이번엔 프론트엔드 개발자에게 물었습니다. 요기요 프론트엔드 개발자의 각양각색 명령어 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/e_ZeGvqddy0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/e_ZeGvqddy0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/e_ZeGvqddy0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "위대한상상 (요기요)",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-03-22T08:27:21Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Y-nEXREGBsSb5BOXja1pGlN8SmY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "B0HoRh77-oQ"
+      },
+      "snippet": {
+        "publishedAt": "2023-03-29T03:32:56Z",
+        "channelId": "UCFPWMdvwirwSov3dD3UWAhA",
+        "title": "포트폴리오와 이력서가 차별없이 똑같이 작성되어 있다면 지금 바로 수정하세요! | 프론트엔드를 위한 금쪽같은 개발 상담소_신입 개발자 편",
+        "description": "디자인 관련 자격증은 넣어야 할까요 빼야 할까요? 전과를 여러번 했는데 이 내용은 빼야 할까요? 위와 같은 고민을 하고 있다면?",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/B0HoRh77-oQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/B0HoRh77-oQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/B0HoRh77-oQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Programmers",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-03-29T03:32:56Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "A2TQZUJJfHPn3cgSdKPyC8Vhw6o",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "AT1b0jxmiRY"
+      },
+      "snippet": {
+        "publishedAt": "2023-05-24T09:00:13Z",
+        "channelId": "UChu25pJgVZB3p0dVEgmU0PQ",
+        "title": "프론트엔드 개발자가 React 상태관리 선택이 중요한 이유ㅣ유니콘 기업 현직자",
+        "description": "프론트엔드 #코딩 #react 유니콘 기업 현직자가 추천하는 상태관리 라이브러리 알려드립니다! ▷출연문의 contact us (기업교육 / 책 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/AT1b0jxmiRY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/AT1b0jxmiRY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/AT1b0jxmiRY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "메타코드M",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-05-24T09:00:13Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ivS2kO9XyFwy7-xgj8Y_v4ypddA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "7enO-G0XKWI"
+      },
+      "snippet": {
+        "publishedAt": "2023-07-27T03:19:16Z",
+        "channelId": "UCxt0B-khQ4osa2Li5ln63OA",
+        "title": "프론트엔드 개발자 인턴 브이로그 | 입사 1일차 따끈따끈 온보딩 | 소니 헤드폰 WH-1000XM5",
+        "description": "노이즈캔슬링헤드폰 #WH1000XM5 #몰입의즐거움 본 영상은 소니코리아의 유료광고를 포함하고 있습니다. 작심 스터디 카페에서 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/7enO-G0XKWI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/7enO-G0XKWI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/7enO-G0XKWI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "log the summer",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-07-27T03:19:16Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4kFQZ75O6cm1KiqMGqQDfU8b_2M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YbVuqWD12Ko"
+      },
+      "snippet": {
+        "publishedAt": "2021-04-09T12:21:49Z",
+        "channelId": "UCr3lkp7TJiJTCY4ffRQ1m2A",
+        "title": "웹 프론트엔드 개발자 아무것도 모르는 상태에서 취업까지 하는 구체적인 준비방법 | 프론트엔드 공부순서 | 취업준비 | 면접준비",
+        "description": "메일로 프론트엔드 개발자가 되기 위한 준비 방법에 대한 질문을 정말 많이 받았습니다. 프론트엔드 개발자가 되기 위한 방법들을 답변 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YbVuqWD12Ko/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YbVuqWD12Ko/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YbVuqWD12Ko/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "라매개발자",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-04-09T12:21:49Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "N4BvJVp0nhlty25i2YvFghGZP-M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "HBGN-jZDUrE"
+      },
+      "snippet": {
+        "publishedAt": "2020-01-17T12:01:48Z",
+        "channelId": "UC_4u-bXaba7yrRz_6x6kb_w",
+        "title": "프론트엔드 강의, 프론트엔드 개발자가 되고 싶다면? 웹개발 입문자편 강의를 시작합니다 ⭐️ (HTML, CSS, Javascript + 실전 프로젝트)",
+        "description": "프론트엔드 개발자 되기 입문자편 튜토리얼 강의를 드림코딩 채널에서 2~3개월에 걸쳐서 진행해 보려고 합니다 :) HTML부터 CSS ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HBGN-jZDUrE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HBGN-jZDUrE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HBGN-jZDUrE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "드림코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-01-17T12:01:48Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1r7pdPpgsDbffHPXXvFjHNsL86Y",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "TTLHd3IyErM"
+      },
+      "snippet": {
+        "publishedAt": "2022-01-04T08:33:26Z",
+        "channelId": "UC_4u-bXaba7yrRz_6x6kb_w",
+        "title": "2022 웹개발 로드맵 총정리 (공부순서 알려드림) | 올해는 정말 해보자 🚀",
+        "description": "2022년 시장에서 경쟁력 있는 웹개발자가 되기 위한 테크트리 알려 드립니다. 영상에서 쓴 로드맵 PDF 무료 다운로드 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TTLHd3IyErM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TTLHd3IyErM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TTLHd3IyErM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "드림코딩",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-01-04T08:33:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "IDt63DU8tryGip3v8nAsgDLQz38",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "OlEHB--isGY"
+      },
+      "snippet": {
+        "publishedAt": "2022-12-01T10:15:00Z",
+        "channelId": "UCp-vBtwvBmDiGqjvLjChaJw",
+        "title": "2023 개발자 로드맵 가이드 - 프론트엔드 개발자 필수 시청!!!",
+        "description": "4만명이 수강한 제로초 강좌/로드맵 통합 링크! https://www.zerocho.com/lecture https://www.zerocho.com/lecture 의지력이 약해 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OlEHB--isGY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OlEHB--isGY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OlEHB--isGY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "ZeroCho TV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-12-01T10:15:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "xWqeqTxaFuzal8ZlULxgLX-rxd0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "sC9EuEIfwnE"
+      },
+      "snippet": {
+        "publishedAt": "2023-05-21T07:13:42Z",
+        "channelId": "UChu25pJgVZB3p0dVEgmU0PQ",
+        "title": "프론트엔드 취업에 유리한 프레임워크 알려드릴게요ㅣReact, Vue, Angular",
+        "description": "프론트엔드 #react #개발자 현직자가 알려주는 프론트엔드 취업에 가장 유리한 프레임워크! ▷출연문의 contact us (기업교육 / 책홍보 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sC9EuEIfwnE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sC9EuEIfwnE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sC9EuEIfwnE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "메타코드M",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-05-21T07:13:42Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "wbuxCXLKS0lfUj1l4IQ-9SLqgJs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "XGcH70iPDCY"
+      },
+      "snippet": {
+        "publishedAt": "2023-03-29T03:32:40Z",
+        "channelId": "UCFPWMdvwirwSov3dD3UWAhA",
+        "title": "개발자 이력서에 프로젝트는 어디서부터 어디까지 적는 것이 좋을까요? | 프론트엔드를 위한 금쪽같은 개발 상담소_예비 개발자 편",
+        "description": "실무 경험이 없어서 걱정이에요. 이력서와 포트폴리오는 각각 어떻게 작성해야 할까요? 위와 같은 고민을 하고 있다면?",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/XGcH70iPDCY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/XGcH70iPDCY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/XGcH70iPDCY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Programmers",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-03-29T03:32:40Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "gz7Oq1aKLOIPjxu7L9_X-J25pwM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "K2DvjgQRO5g"
+      },
+      "snippet": {
+        "publishedAt": "2023-04-25T02:50:51Z",
+        "channelId": "UCoN1XLeAX2OazuZdQ9b8U9Q",
+        "title": "프론트엔드 백엔드 채용규모 분석 | 사람인 원티드 잡코리아 랠릿 프로그래머스",
+        "description": "CS지식의 정석 https://inf.run/17Fb ▷C++ 10주완성 코딩테스트 https://inf.run/xZhA.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/K2DvjgQRO5g/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/K2DvjgQRO5g/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/K2DvjgQRO5g/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "큰돌의터전",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-04-25T02:50:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "NKU7Vxt9N12xEcjWUPGq1jJwOSo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "E9YDnkNHm4U"
+      },
+      "snippet": {
+        "publishedAt": "2021-08-16T03:41:26Z",
+        "channelId": "UCr3lkp7TJiJTCY4ffRQ1m2A",
+        "title": "코딩 1도 모르는 사람이 빠르고 재밌게 웹 프론트엔드 개발자 되는 로드맵",
+        "description": "웹 프론트엔드 개발자를 목표로하시는 분들이 공부해야할 게 너무 많아 뭐부터 시작해야 할 지 막막해 하십니다. 수 많은 공부해야할 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/E9YDnkNHm4U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/E9YDnkNHm4U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/E9YDnkNHm4U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "라매개발자",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-08-16T03:41:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "BhGfOlhBVav7UBYwN-m_0IdxBvc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ZWwcCoJ2esY"
+      },
+      "snippet": {
+        "publishedAt": "2023-05-04T00:00:13Z",
+        "channelId": "UC4CjFOoZlYSaqMHEDFCKcXQ",
+        "title": "댕댕이와 함께하는 프런트엔드 개발자 재택근무 일상 🐶  | LINE DEV Vlog",
+        "description": "우리 귀여운 댕댕이랑 하루 종일 같이 일하면 얼마나 좋게요 집사 라이너들에게 하이브리드 워크의 가장 좋은 점은 반려동물과 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZWwcCoJ2esY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZWwcCoJ2esY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZWwcCoJ2esY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "라인개발실록",
+        "liveBroadcastContent": "none",
+        "publishTime": "2023-05-04T00:00:13Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "9BshFbETkYYxCCl5xhheGztxiys",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "bFaKx7_epvY"
+      },
+      "snippet": {
+        "publishedAt": "2022-07-22T09:52:58Z",
+        "channelId": "UCoN1XLeAX2OazuZdQ9b8U9Q",
+        "title": "좋은 프론트 엔드 개발자란? | 인프런 UX 분석",
+        "description": "CS지식의 정석 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/bFaKx7_epvY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/bFaKx7_epvY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/bFaKx7_epvY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "큰돌의터전",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-07-22T09:52:58Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Y1qqQ1ZtfmK6oKDe1NnfdMEg0Wc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "jsvjEBxrj6o"
+      },
+      "snippet": {
+        "publishedAt": "2022-12-22T05:06:22Z",
+        "channelId": "UCPiLe0hwTpPdvwKqQOzgs0A",
+        "title": "내가 개발자라면? 프론트엔드? 백엔드? 밸런스게임",
+        "description": "shorts #코드스테이츠 #코딩부트캠프 #프론트엔드 #백엔드 #개발자 코드스테이츠 크루들과 함께 하는 밸런스 게임! 내게 맞는 부트 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jsvjEBxrj6o/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jsvjEBxrj6o/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jsvjEBxrj6o/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Code States",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-12-22T05:06:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "dEAPaUFzrNay9fiqdvukb6RoPwk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ZM55pce2AkY"
+      },
+      "snippet": {
+        "publishedAt": "2022-12-21T10:02:15Z",
+        "channelId": "UCSLrpBAzr-ROVGHQ5EmxnUg",
+        "title": "2023 &#39;모던&#39; 웹개발자 하려면 배울 것들",
+        "description": "알고있으면 틀딱소리는 안듣습니다 개발자 시켜줌 https://codingapple.com/ 구독자용 일반강의 10% 할인 쿠폰 RFC14 (맨날바뀜 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZM55pce2AkY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZM55pce2AkY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZM55pce2AkY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "코딩애플",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-12-21T10:02:15Z"
+      }
+    }
+  ]
+}
