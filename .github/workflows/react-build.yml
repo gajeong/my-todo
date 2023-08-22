@@ -11,22 +11,20 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
+
+    env:
+      CI: false
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+
     steps:
-      - name: Checkout source code.   # 레포지토리 체크아웃
-        uses: actions/checkout@lecture/youtube
+    - uses: actions/checkout@v3
 
-      - name: Cache node modules      # node modules 캐싱
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.OS }}-build-
-            ${{ runner.OS }}-
+    - name: Install Yarn
+      run: npm install -g yarn
 
-      - name: Install Dependencies    # 의존 파일 설치
-        run: npm install
-
-      - name: Build                   # React Build
-        run: npm run build
+    - name: Build                   # React Build
+      run: yarn build
