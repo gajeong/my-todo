@@ -2,6 +2,7 @@
   "name": "youtube",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://gajeong.github.io/my-todo",
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^39.0.1",
     "@ckeditor/ckeditor5-react": "^6.1.0",
@@ -37,6 +38,7 @@
   "scripts": {
     "start": "craco start",
     "build": "react-scripts build",
+    "postbuild": "cp build/index.html build/404.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -19,6 +19,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    basename: process.env.PUBLIC_URL,
     children: [
       {
         index: true,
