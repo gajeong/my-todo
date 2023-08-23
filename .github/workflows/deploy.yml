@@ -75,7 +75,10 @@ jobs:
           CI: ''
 
       # 빌드된 파일들(./build)을 gh-pages 브랜치로 배포합니다.
-      - uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: main
           publish_dir: ./build
+          script_mode: true
