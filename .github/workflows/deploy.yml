@@ -23,6 +23,7 @@ jobs:
           jq -r 'to_entries|map("\(.key)=\(.value|tostring)")|.[]' <<< "$SECRETS_CONTEXT" > .env
         env:
           SECRETS_CONTEXT: ${{ toJson(secrets) }}
+
       - name: Copy Env
         run: cat .env
 
