@@ -24,9 +24,6 @@ jobs:
         env:
           SECRETS_CONTEXT: ${{ toJson(secrets) }}
 
-      - name: Copy Env
-        run: cat .env
-
       # node.js 런타임을 사용합니다.
       - name: Use node.js
         uses: actions/setup-node@v3
