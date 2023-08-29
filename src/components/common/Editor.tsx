@@ -3,13 +3,15 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 import { useState, ChangeEvent } from 'react'
 import Button from './Button'
 import { useQuery } from 'react-query'
-import { readCategory } from '../../api/category'
+import { readCategory } from '../../api/posts/category'
 import { getDate } from '../../util/timeago'
 import { v4 as uuid } from 'uuid'
 import {
   BsFillUnlockFill,
   BsFillLockFill,
 } from 'react-icons/bs'
+import { addPost } from '../../api/posts/post'
+import { isObjectEmpty } from '../../util/object'
 export default function Editor({
   title,
 }: {
@@ -21,7 +23,7 @@ export default function Editor({
     data: categories,
     isError,
   } = useQuery(
-    ['categories', 'read'],
+    ['posts', 'categories'],
     async () =>
       await readCategory().then((res) => {
         setPost({ ...post, category: res && res[0].name })
@@ -51,6 +53,11 @@ export default function Editor({
     const { name, value } = e.target
     setPost({ ...post, [name]: value })
   }
+
+  const enrollPosts = async () => {
+    if (isObjectEmpty(post)) return
+    await addPost(post).then((res) => console.log(res))
+  }
   return (
     <main>
       <div className='flex mb-2 gap-2 items-center '>
@@ -66,6 +73,22 @@ export default function Editor({
             <BsFillLockFill />
           )}
         </div>
+        <select
+          className='outline-1 outline-offset-4 outline-[#a1a1a1]  border hover:cursor-pointer rounded'
+          name='category'
+          onChange={handleChange}
+        >
+          {categories?.map((category) => (
+            <option
+              key={category.id}
+              className='outline-none text-white'
+              value={category.name}
+              style={{ background: category.color }}
+            >
+              {category.name}
+            </option>
+          ))}
+        </select>
         <input
           placeholder='제목'
           type='text'
@@ -74,9 +97,11 @@ export default function Editor({
           onChange={handleChange}
           value={post.title}
         />
-        <Button classname='border w-[200px] rounded-lg'>
-          {title}
-        </Button>
+        <div onClick={enrollPosts}>
+          <Button classname='border w-[200px] rounded-lg'>
+            {title}
+          </Button>
+        </div>
       </div>
       <CKEditor
         editor={ClassicEditor}
