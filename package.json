@@ -2,7 +2,6 @@
   "name": "youtube",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gajeong.github.io/my-todo",
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^39.0.1",
     "@ckeditor/ckeditor5-react": "^6.1.0",

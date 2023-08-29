@@ -70,7 +70,7 @@ export default function TodoItem({
       onSuccess: () => {
         queryClient.invalidateQueries([
           'todo',
-          'categories',
+          getDate(date),
         ])
       },
     }
