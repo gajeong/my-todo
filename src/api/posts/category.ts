@@ -48,7 +48,7 @@ async function delCategory(id: string) {
 }
 
 async function changeStatus(data: Category) {
-  return write(`posts/category/${data.id}`, { data })
+  return write(`posts/category/${data.id}`, data)
 }
 export {
   readCategory,

@@ -39,7 +39,7 @@ export default function AddTodoModal({
   }
   const queryClient = useQueryClient()
   const { isLoading, data, isError } = useQuery(
-    ['categories', 'read'],
+    ['todo', 'categories'],
     async () =>
       await readCategory().then((res) => {
         setTodo({
