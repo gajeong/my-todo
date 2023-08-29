@@ -3,6 +3,7 @@ import {
   MouseEvent,
   useCallback,
   ChangeEvent,
+  useEffect,
 } from 'react'
 import Button from '../../../components/common/Button'
 import { RiDeleteBin2Line } from 'react-icons/ri'
@@ -114,6 +115,10 @@ export default function EditCategory() {
       },
     }
   )
+
+  useEffect(() => {
+    readCategory().then((res) => updateCategories(res))
+  }, [])
   return (
     <div>
       <h2 className='text-center text-lg'>

@@ -1,4 +1,4 @@
-import { MouseEvent, useState } from 'react'
+import { MouseEvent, Suspense, useState } from 'react'
 import Button from '../components/common/Button'
 import TodoList from '../components/todo/todolist'
 import styles from './ToDo.module.css'
@@ -8,6 +8,7 @@ import { BsCaretLeft, BsCaretRight } from 'react-icons/bs'
 import { BsCalendar2Plus } from 'react-icons/bs'
 import { RiDeleteRow } from 'react-icons/ri'
 import AddTodoModal from '../components/todo/addTodoModal'
+import Spinner from '../components/common/Spinner'
 export default function ToDo() {
   const [date, setDate] = useState(new Date())
   const [addModalState, setAddModalState] = useState(false)
@@ -68,13 +69,15 @@ export default function ToDo() {
           onClick={() => setAddModalState(true)}
         />
       </div>
-      <TodoList date={date} delStatus={delStatus} />
-      <CategoryList open={open} setOpen={setOpen} />
-      <AddTodoModal
-        date={date}
-        setOpen={setAddModalState}
-        open={addModalState}
-      />
+      <Suspense fallback={<Spinner />}>
+        <TodoList date={date} delStatus={delStatus} />
+        <CategoryList open={open} setOpen={setOpen} />
+        <AddTodoModal
+          date={date}
+          setOpen={setAddModalState}
+          open={addModalState}
+        />
+      </Suspense>
     </section>
   )
 }

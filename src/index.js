@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import {
@@ -11,6 +11,7 @@ import ToDo from './pages/ToDo'
 import Posts from './pages/Posts'
 import CreatePost from './pages/CreatePost'
 import Setting from './pages/posts/Setting'
+import Spinner from './components/common/Spinner'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root')
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
   },
 ])
 root.render(
-  <React.StrictMode>
+  <React.Fragment>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </React.Fragment>
 )

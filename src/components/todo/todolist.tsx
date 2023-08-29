@@ -20,6 +20,7 @@ export default function TodoList({
       staleTime: 1000 * 60,
     }
   )
+
   return (
     <section className='relative'>
       <main className='border h-fit rounded w-2/5 max-sm:w-full my-2 '>
