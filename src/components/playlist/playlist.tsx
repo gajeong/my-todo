@@ -7,6 +7,7 @@ import {
 import PlayItem from './playItem'
 import MultiCarousel from '../common/MultiCarousel'
 import { fetchPlayList } from '../../api/playlist'
+import { useErrorBoundary } from 'react-error-boundary'
 export default function PlayList({
   keyword,
   searchKey,
@@ -14,6 +15,7 @@ export default function PlayList({
   keyword: string
   searchKey: string
 }) {
+  const { showBoundary } = useErrorBoundary()
   const {
     isLoading,
     data: playlist,
@@ -24,6 +26,8 @@ export default function PlayList({
       return await fetchPlayList(searchKey)
     }
   )
+  if (error) showBoundary(error)
+
   return (
     <section>
       <p className='w-fit bg-gray-100 p-1 text-sm rounded-md italic'>

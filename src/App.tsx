@@ -6,6 +6,7 @@ import {
 import { ReactQueryDevtools } from 'react-query/devtools'
 import Page from './components/common/Page'
 import { Outlet } from 'react-router-dom'
+import { QueryErrorResetBoundary } from 'react-query'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -17,10 +18,12 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <Page>
-      <QueryClientProvider client={queryClient}>
-        <Outlet />
-        <ReactQueryDevtools />
-      </QueryClientProvider>
+      <QueryErrorResetBoundary>
+        <QueryClientProvider client={queryClient}>
+          <Outlet />
+          <ReactQueryDevtools />
+        </QueryClientProvider>
+      </QueryErrorResetBoundary>
     </Page>
   )
 }
