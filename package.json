@@ -41,7 +41,7 @@
     "@types/react": "^18.2.18"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "postbuild": "cp build/index.html build/404.html",
     "test": "react-scripts test",
